@@ -1,0 +1,11 @@
+{
+    "livery_source_dir": "FA-18C_lot_20_Template",
+    "squad_shortname": "SWAF",
+    "livery_basename": "Swedish AirForce Low Vis",
+    "countries": ["SWE", "USA"],
+    "members": [
+        { "rank": "Lt", "first": "Magnus", "callsign": "magwo", "last": "Wolffelt", "kills": 0 },
+        { "rank": "Lt", "first": "John", "callsign": "Jaeger", "last": "Doe", "kills": 0 },
+        { "rank": "Cpt", "first": "Jane", "callsign": "Foo", "last": "Johnsson", "kills": 0 }
+    ]
+}
