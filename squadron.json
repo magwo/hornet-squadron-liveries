@@ -1,5 +1,6 @@
 {
     "livery_source_dir": "FA-18C_lot_20_Template",
+    "livery_source_description_lua": "description.lua",
     "squad_shortname": "SWAF",
     "livery_basename": "Swedish AirForce Low Vis",
     "countries": ["SWE", "USA"],
