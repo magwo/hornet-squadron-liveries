@@ -20,21 +20,35 @@ function init() {
     console.log("Description is", description);
 }
 
-console.log("Read description.lua");
-
 console.log("Convert base skin files to png or similar, put in temp folder");
 
-console.log("For each member:");
-console.log("  Create member dir in temp dir");
-console.log("  Copy base pngs to member temp dir");
-console.log("  Add text decals tp temp pngs");
-console.log("  Export member pngs to DDS files (DXT5?) to member output dir");
-console.log("  Write modified description.lua to member output dir");
+function createBaseSkin() {
+
+}
+
+
+function createMemberSkin(m) {
+    console.log("Processing member", m.callsign);
+    const memberTempDir = `temp/${m.callsign}`;
+    fs.ensureDirSync(memberTempDir);
+
+    console.log("  Copy base pngs to member temp dir");
+
+    console.log("  Add text decals tp temp pngs");
+
+    const memberOutputDir = `output/${squad.livery_basedir} ${m.callsign}`
+    fs.ensureDirSync(memberOutputDir);
+
+    console.log("  Constructing and writing member description lua", m.callsign);
+    const memberDesc = description.replace(/name = \"[^\"]*\"/, `name = "${squad.livery_basename} ${m.callsign}"`);
+    fs.writeFileSync(`${memberOutputDir}/${squad.livery_source_description_lua}`, memberDesc, "utf8");
+    
+
+    console.log("  Export member pngs to DDS files (DXT5?) to member output dir");
+    console.log("  Write modified description.lua to member output dir");
+}
 
 
 init();
-
-squad.members.forEach(function(m) {
-    console.log("Processing member", m.callsign);
-    fs.ensureDirSync(`temp/${m.callsign}`);
-});
+createBaseSkin();
+squad.members.forEach(createMemberSkin);
