@@ -53,15 +53,15 @@ function createMemberSkin(m) {
 
     console.log("  Adding text decals and exporting to DDS files");
     gm(`${__dirname}/temp/F18C_1_DIFF${squad.livery_source_file_suffix}.png`)
-        .draw([`font 'Arial Black.ttf' font-size 25 fill '#444' translate ${730-2048},${1890-2048} gravity Center rotate 184 text 0,0 '${pilotNameText}'`])
-        .draw([`font 'Arial Black.ttf' font-size 25 fill '#444' translate ${730-2048},${1060-2048} gravity Center rotate 356 text 0,0 '${pilotNameText}'`])
+        .draw([`font 'ITC Franklin Gothic LT Medium Condensed.ttf' font-size 26 fill 'rgba(30,30,30,0.7)' translate ${730-2048},${1897-2048} gravity Center rotate 185 text 0,0 '${pilotNameText}'`])
+        .draw([`font 'ITC Franklin Gothic LT Medium Condensed.ttf' font-size 26 fill 'rgba(30,30,30,0.7)' translate ${730-2048},${1053-2048} gravity Center rotate 355 text 0,0 '${pilotNameText}'`])
         .write(`${__dirname}/${memberOutputDir}/F18C_1_DIFF${squad.livery_source_file_suffix}.dds`, errorHandler);
 
     gm(`${__dirname}/temp/F18C_2_DIFF${squad.livery_source_file_suffix}.png`)
         .font("Arial Black.ttf", 60)
         .stroke("#444")
         .fill("#444")
-        .drawText(0, 0, m.callsign.toUpperCase(), "center")
+        .drawText(0, 0, "", "center")
         .write(`${__dirname}/${memberOutputDir}/F18C_2_DIFF${squad.livery_source_file_suffix}.dds`, errorHandler);
 
     
