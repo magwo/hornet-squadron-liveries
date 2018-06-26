@@ -1,5 +1,6 @@
 {
     "livery_source_dir": "FA-18C_lot_20_Template",
+    "files_to_copy": ["VX9_bort_number_LEFT.dds", "VX9_bort_number_RIGHT.dds"],
     "livery_source_file_suffix": "",
     "livery_source_description_lua": "description.lua",
     "livery_basedir": "F23 SWAF",
@@ -7,8 +8,6 @@
     "livery_basename": "Swedish AirForce LV",
     "countries": ["SWE", "USA"],
     "members": [
-        { "rank": "Lt", "first": "Magnus", "callsign": "magwo", "last": "Wolffelt", "kills": 0 },
-        { "rank": "Lt", "first": "John", "callsign": "Jaeger", "last": "Doe", "kills": 0 },
-        { "rank": "Cpt", "first": "Jane", "callsign": "Foo", "last": "Johnsson", "kills": 0 }
+        { "rank": "Lt", "first": "Magnus", "callsign": "magwo", "last": "Wolffelt", "kills": 0 }
     ]
 }
